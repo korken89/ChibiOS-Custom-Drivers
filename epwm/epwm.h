@@ -81,7 +81,7 @@ typedef enum {
 /**
  * @brief   Type of a structure representing a EPWM driver.
  */
-typedef struct EPWMDriver EPWMDriver; 
+typedef struct EPWMDriver EPWMDriver;
 
 #include "epwm_lld.h"
 
@@ -193,6 +193,7 @@ extern "C" {
                         epwmchannel_t channel,
                         epwmcnt_t width);
   void epwmDisableChannel(EPWMDriver *epwmp, epwmchannel_t channel);
+  void epwmSendPulses(EPWMDriver *epwmp);
 #ifdef __cplusplus
 }
 #endif
